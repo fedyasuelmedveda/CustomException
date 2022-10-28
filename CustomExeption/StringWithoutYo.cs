@@ -9,7 +9,7 @@ namespace CustomException
 {
     internal class StringWithoutYo
     {
-        string? s;
+        public string? S { get; set; }
         public StringWithoutYo(string? s)
         {
             for(int i = 0; i < s.Length; i++)
@@ -17,7 +17,7 @@ namespace CustomException
                 if (s[i] == 'ё')
                     throw new YoException("Буква 'ё' запрещена!");
             }
-            this.s = s;
+            this.S = s;
 
         }
     }
